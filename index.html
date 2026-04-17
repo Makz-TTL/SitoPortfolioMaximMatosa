@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Progetto Scolastico</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+        <div class="dot" id="dot3" data-target="#anno3"><span class="dot-label">3°</span></div>
+        <div class="dot" id="dot4" data-target="#anno4"><span class="dot-label">4°</span></div>
+        <div class="dot" id="dot5" data-target="#anno5"><span class="dot-label">5°</span></div>
+    </div>
+
+    <nav>
+        <div class="logo">&gt;_ Dev.Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">Chi Sono</a></li>
+            <li><a href="#anno3">3° Anno</a></li>
+            <li><a href="#anno4">4° Anno</a></li>
+            <li><a href="#anno5">5° Anno</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header id="about" class="section">
+        <div class="about-container">
+            <div class="about-title-row">
+                <div class="about-text">
+                    <h1>MAXIM MATOSA</h1>
+                </div>
+                <img src="img/foto_profilo.jpeg" alt="Foto Profilo" class="profile-pic">
+            </div>
+            <div class="about-text">
+                <p>Benvenuto nel mio portfolio. Nato in Moldavia. Stanziato in Italia. Appassionato di web development, design e musica</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="anno3" class="section">
+        <h2 class="section-title">/* Terzo Anno */</h2>
+        <div class="grid-container">
+            <div class="project-card">
+                <img src="img/pcto_img_copertina.jpg" alt="P3.1" class="project-img">
+                <div class="project-info">
+                    <h3>UST</h3>
+                    <p>Introduzione al PCTO</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/pcto_img_copertina.jpg</span>
+                    <div class="m-text">
+                        <p>Il "Progetto UST: Introduzione al PCTO" è un'iniziativa degli Uffici Scolastici Territoriali
+                            per preparare gli studenti ai Percorsi per le Competenze Trasversali e per l'Orientamento
+                            (PCTO).L'obiettivo è fornire conoscenze di base su cosa sono i PCTO, sui diritti e doveri
+                            degli studenti, sulla sicurezza nei luoghi di lavoro e sulle principali competenze
+                            trasversali richieste dal mondo del lavoro.</p>
+                        <ul>
+                            <li>ore svolte: 2</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/sicurezzaSulLavoro_img_copertina.jpeg" alt="P3.2" class="project-img">
+                <div class="project-info">
+                    <h3>Sicurezza</h3>
+                    <p>Norme di sicurezza sul lavoro</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/sicurezzaSulLavoro_img_copertina.jpeg</span>
+                    <div class="m-text">
+                        <p>Studio delle normative vigenti sulla sicurezza. Ore di ripasso sulle norme di sicurezza e sul
+                            lavoro fatto nel biennio. Abbiamo lavorato su come rendere l'ambiente lavorativo sicuro ed
+                            adatto a tutti.</p>
+                        <ul>
+                            <li>ore svolte: 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/monta&smonta_img_copertina.jpeg" alt="P3.3" class="project-img">
+                <div class="project-info">
+                    <h3>Monta&Smonta</h3>
+                    <p>Relazione tecnica sull'assemblaggio e componenti hardware</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/monta&smonta_img_copertina.jpeg</span>
+                    <div class="m-text">
+                        <p>Il Progetto Monta-Smonta è un'attività di PCTO che coinvolge gli studenti in un'esperienza
+                            pratica di smontaggio e rimontaggio di un computer desktop. Durante il progetto, ho appreso
+                            l'anatomia interna del PC, identificando e comprendendo la funzione di componenti come CPU,
+                            RAM, scheda madre e alimentatore.
+
+                            Questa attività promuove lo sviluppo di competenze tecniche, manuali e di problem-solving,
+                            offrendo un'opportunità concreta per applicare le conoscenze teoriche acquisite in classe.
+                        </p>
+                        <ul>
+                            <li>ore svolte: 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/busConnect_img_copertina.png" alt="P3.4" class="project-img">
+                <div class="project-info">
+                    <h3>BusConnect</h3>
+                    <p>Un ponte tra generazioni</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/busConnect_img_copertina.png</span>
+                    <div class="m-text">
+                        <p>
+                            Il progetto mira a coinvolgere studenti delle scuole superiori, con competenze pregresse in
+                            programmazione, nel ruolo di tutor per introdurre gli studenti delle scuole medie ai
+                            concetti fondamentali del linguaggio C++. Attraverso lezioni interattive e laboratori
+                            pratici, gli studenti delle medie hanno avuto l'opportunità di apprendere le basi della
+                            programmazione, mentre noi tutor delle superiori abbiamo sviluppato competenze didattiche,
+                            comunicative e organizzative..</p>
+                        <ul>
+                            <li>ore svolte: 10</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anno4" class="section">
+        <h2 class="section-title">/* Quarto Anno */</h2>
+        <div class="grid-container">
+
+            <div class="project-card">
+                <img src="img/confindustria_img_copertina.png" alt="P4.1" class="project-img">
+                <div class="project-info">
+                    <h3>Confindustria</h3>
+                    <p>Mi presento</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/confindustria_img_copertina.png</span>
+                    <div class="m-text">
+                       <p>Un percorso intensivo dedicato all’orientamento professionale, focalizzato sulla costruzione di un’immagine personale efficace. Attraverso il confronto con esperti del settore, ho approfondito le strategie per redigere un curriculum d'impatto e le tecniche di comunicazione necessarie per presentarsi in modo chiaro e professionale, imparando a interpretare correttamente le reali esigenze del mercato del lavoro odierno.</p>
+                        <ul>
+                            <li>ore svolte: 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/cna_img_copertina.jpeg" alt="P4.2" class="project-img">
+                <div class="project-info">
+                    <h3>CNA</h3>
+                    <p>Contratti aziendali e realtà aziendali territoriali</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/cna_img_copertina.jpeg</span>
+                    <div class="m-text">
+                        <p>Attività formativa presso il Tecnopolo di Reggio Emilia volta a esplorare le dinamiche del sistema aziendale. L’incontro ha permesso di acquisire una maggiore consapevolezza del mondo del lavoro, analizzando nel dettaglio il funzionamento delle imprese, i diritti e i doveri dei lavoratori e le diverse tipologie di contratti, fornendo le basi essenziali per un inserimento lavorativo consapevole.</p>
+                        <ul>
+                            <li>ore svolte: 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/polarity_img_copertina.jpg" alt="P4.3" class="project-img">
+                <div class="project-info">
+                    <h3>Polarity</h3>
+                    <p>Parte 1</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/polarity_img_copertina.jpg</span>
+                    <div class="m-text">
+                        <p>Un’immersione diretta nella realtà di Polarity, azienda specializzata nel settore IT. Durante l'incontro, i professionisti hanno illustrato i processi operativi e i servizi offerti, evidenziando il forte legame tra teoria e pratica. L’esperienza ha permesso di comprendere gli ambiti applicativi dell’informatica e l’importanza di integrare solide competenze tecniche con le indispensabili soft skill.</p>
+                        <ul>
+                            <li>ore svolte: 2</li>
+                        </ul>
+                   </div>
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/prjwrk_img_copertina.jpg" alt="P4.3" class="project-img">
+                <div class="project-info">
+                    <h3>Ascolto Project Work</h3>
+                    <p>Presentazione degli studenti di quinta dei propri progetti finali</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/prjwrk_img_copertina.jpg</span>
+                    <div class="m-text">
+                        <p>Sessione di orientamento dedicata all'analisi dei progetti software sviluppati dagli studenti delle classi quinte. Attraverso l’osservazione di casi reali, ho potuto approfondire le tecnologie utilizzate, le metodologie di sviluppo e l’importanza dell’organizzazione del lavoro di gruppo, ottenendo una visione concreta su come si struttura un progetto professionale nel settore tecnologico.</p>
+                        <ul>
+                            <li>ore svolte: 3</li>
+                        </ul>
+                   </div>
+
+                </div>
+            </div>
+
+            <!--
+                <div class="project-card">
+                <img src="img/telegram_img_copertina.jpg" alt="P4.4" class="project-img">
+                <div class="project-info">
+                    <h3>Polarity Code Lab</h3>
+                    <p>Programmazione in Node.js e Typescript</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/telegram_img_copertina.jpg</span>
+                    <div class="m-text">
+                        <p>Un bot Telegram avanzato sviluppato in Node.js che utilizza l’intelligenza artificiale per la gestione della produttività. Il sistema integra OpenAI (GPT-4o & Whisper) per convertire messaggi vocali e testuali in obiettivi strutturati, monitora le scadenze in tempo reale e convalida il completamento dei task tramite riconoscimento visivo delle immagini. Include un sistema di gamification con "penitenze" generate dall'AI per i task falliti.</p>
+                        <ul>
+                            <li>ore svolte: 2 giorni in azienda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            
+
+        </div>
+    </section>
+
+    <section id="anno5" class="section">
+        
+
+        <h2 class="section-title">/* Quinto Anno */</h2>
+        <div class="grid-container">
+
+            <!--
+                <div class="project-card">
+                <img src="img/stage_img_copertina.png" alt="P4.5" class="project-img">
+                <div class="project-info">
+                    <h3>Stage estivo</h3>
+                    <p>Lavoro estivo in azienda</p>
+                    <a href="#" class="btn">Vedi Dettagli</a>
+                </div>
+                <div class="modal-data" style="display: none;">
+                    <span class="m-banner">img/stage_img_copertina.png</span>
+                    <div class="m-text">
+                        <p>Relazione sull'esperienza di stage estivo aziendale.</p>
+                        <ul>
+                            <li>ore svolte: 160</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="project-card">
+                <img src="img/WIP_img_copertina.jpg" alt="P5.1" class="project-img">
+                <div class="project-info">
+                    <h3>WORK IN PROGRESS 2027</h3>
+                    <p>Descrizione in fase di definizione. Questo spazio ospiterà l'elaborato finale del mio percorso
+                        scolastico.</p>
+                    <button class="btn" id="btn-loading">Loading...</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <img src="" alt="Banner Progetto" id="modalBanner" class="modal-banner">
+            <div class="modal-body">
+                <h2 id="modalTitle">Titolo</h2>
+                <div id="modalText"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2026 Maxim Matosa - portfolio scolastico 2025/2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
