@@ -281,28 +281,45 @@ nav {
     margin-top: 2rem; 
 }
 /* --- Responsività Mobile --- */
-@media (max-width: 1024px) {
-    .profile-pic {
-        width: 220px;
-        height: 220px;
-    }
-}
-
 @media (max-width: 768px) {
+    /* 1. Riduciamo il padding della sezione per dare più spazio al contenuto */
+    #about {
+        padding: 80px 5% 50px 5%; 
+        min-height: auto; /* Evita che la sezione sia troppo lunga se il contenuto è poco */
+    }
+
+    /* 2. Ottimizzazione del contenitore */
+    .about-container {
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    /* 3. Layout del titolo e immagine */
     .about-title-row {
-        flex-direction: column-reverse; /* Foto sotto il nome su mobile */
-        align-items: flex-start;
-        gap: 2rem;
+        flex-direction: column-reverse;
+        align-items: center; /* Centriamo tutto su mobile */
+        text-align: center;
+        gap: 1.5rem;
     }
-    
+
     .about-text h1 {
-        font-size: 20vw; 
-        letter-spacing: -3px;
+        font-size: 15vw; /* Leggermente più piccolo per evitare a capo brutti */
+        letter-spacing: -2px;
+        line-height: 0.9;
     }
-    
+
     .profile-pic {
-        width: 150px; 
-        height: 150px;
+        width: 180px; /* Dimensioni leggermente aumentate per visibilità */
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Miglioramento leggibilità testo */
+    .about-text p {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0 10px;
     }
 }
 /* ==========================================================================
