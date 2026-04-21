@@ -112,4 +112,40 @@ $(document).ready(function() {
         }
     });
 
+   const copyElements = document.querySelectorAll('.copy-item');
+    const toastMessage = document.getElementById('toastMessage');
+
+    if (copyElements.length > 0 && toastMessage) {
+        
+        copyElements.forEach(element => {
+            element.addEventListener('click', function() {
+                
+                // Prende i dati dall'HTML
+                const textToCopy = this.getAttribute('data-copy');
+                const type = this.getAttribute('data-type');
+                
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    
+                    // Cambia il messaggio in base a cosa è stato cliccato
+                    if (type === 'mail') {
+                        toastMessage.textContent = "La mia E-Mail è stata copiata nei tuoi appunti";
+                    } else if (type === 'phone') {
+                        toastMessage.textContent = "Il mio numero di telefono è stato copiato nei tuoi appunti";
+                    }
+                    
+                    // Mostra il messaggio
+                    toastMessage.classList.add('show');
+                    
+                    // Nasconde il messaggio dopo 1.5 secondi
+                    setTimeout(() => {
+                        toastMessage.classList.remove('show');
+                    }, 1500);
+
+                }).catch(err => {
+                    console.error("Errore durante la copia: ", err);
+                });
+            });
+        });
+    }
+
 });

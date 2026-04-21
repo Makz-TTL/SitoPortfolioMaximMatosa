@@ -580,5 +580,62 @@ footer {
     transform: rotate(360deg);
   }
 }
+.copy-item {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.copy-item:hover {
+    color: #007BFF; /* Cambia questo colore in base al tema del tuo sito */
+}
+
+/* Stile per il messaggio fantasma (Toast) */
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.4s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+}
+.floating-logo-link {
+    position: fixed;
+    bottom: 80px; /* Regola questo valore per avvicinarlo o allontanarlo dal footer */
+    right: 20px;   /* Distanza dal bordo sinistro */
+    z-index: 1000; /* Assicura che il logo stia sempre sopra agli altri elementi della pagina */
+    transition: transform 0.3s ease; /* Transizione fluida per l'effetto hover */
+}
+
+/* Stile per l'immagine del logo */
+.floating-logo {
+    width: 60px; /* Modifica questo valore per ingrandire o rimpicciolire il logo */
+    height: auto;
+    border-radius: 8px; /* Metti 50% se vuoi un logo perfettamente rotondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra per farlo risaltare */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.floating-logo-link:hover {
+    transform: scale(1.1); /* Ingrandisce il logo del 10% */
+}
+
+.floating-logo-link:hover .floating-logo {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Accentua l'ombra sull'hover */
+}
 
 
