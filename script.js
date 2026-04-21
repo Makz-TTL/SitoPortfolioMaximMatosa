@@ -112,38 +112,37 @@ $(document).ready(function() {
         }
     });
 
-   const copyElements = document.querySelectorAll('.copy-item');
-    const toastMessage = document.getElementById('toastMessage');
+   const $copyElements = $('.copy-item');
+    const $toastMessage = $('#toastMessage');
 
-    if (copyElements.length > 0 && toastMessage) {
+    if ($copyElements.length > 0 && $toastMessage.length > 0) {
         
-        copyElements.forEach(element => {
-            element.addEventListener('click', function() {
+        $copyElements.on('click', function() {
+            const $this = $(this);
+            
+            // Prende i dati dall'HTML usando .data()
+            const textToCopy = $this.data('copy');
+            const type = $this.data('type');
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
                 
-                // Prende i dati dall'HTML
-                const textToCopy = this.getAttribute('data-copy');
-                const type = this.getAttribute('data-type');
+                // Cambia il messaggio in base a cosa è stato cliccato
+                if (type === 'mail') {
+                    $toastMessage.text("La mia E-Mail è stata copiata nei tuoi appunti");
+                } else if (type === 'phone') {
+                    $toastMessage.text("Il mio numero di telefono è stato copiato nei tuoi appunti");
+                }
                 
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    
-                    // Cambia il messaggio in base a cosa è stato cliccato
-                    if (type === 'mail') {
-                        toastMessage.textContent = "La mia E-Mail è stata copiata nei tuoi appunti";
-                    } else if (type === 'phone') {
-                        toastMessage.textContent = "Il mio numero di telefono è stato copiato nei tuoi appunti";
-                    }
-                    
-                    // Mostra il messaggio
-                    toastMessage.classList.add('show');
-                    
-                    // Nasconde il messaggio dopo 1.5 secondi
-                    setTimeout(() => {
-                        toastMessage.classList.remove('show');
-                    }, 1500);
+                // Mostra il messaggio
+                $toastMessage.addClass('show');
+                
+                // Nasconde il messaggio dopo 1.5 secondi
+                setTimeout(() => {
+                    $toastMessage.removeClass('show');
+                }, 1500);
 
-                }).catch(err => {
-                    console.error("Errore durante la copia: ", err);
-                });
+            }).catch(err => {
+                console.error("Errore durante la copia: ", err);
             });
         });
     }
